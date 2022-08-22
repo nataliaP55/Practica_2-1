@@ -53,4 +53,17 @@ UPDATE primer_tabla SET autor = "Borges", año = 1984 WHERE id_registro = 1;
 
 DELETE FROM primer_tabla WHERE id_registro = 2;
 
-INSERT INTO primer_tabla (autor, año) VALUES ("Arlt", 1955);
+
+ALTER TABLE primer_tabla
+ADD nombre_libro VARCHAR (30) NOT NULL;
+
+ALTER TABLE primer_tabla
+MODIFY COLUMN cant_pag INT;
+
+
+UPDATE primer_tabla SET nombre_libro = "Los conjurados", cant_pag = 406 WHERE id_registro = 1;
+UPDATE primer_tabla SET nombre_libro = "Rayuela", cant_pag = 234 WHERE id_registro = 3;
+UPDATE primer_tabla SET nombre_libro = "Bestiario", cant_pag = 165 WHERE id_registro = 4;
+UPDATE primer_tabla SET nombre_libro = "Papeles inesperados", cant_pag = 406 WHERE id_registro = 5;
+UPDATE primer_tabla SET nombre_libro = "Libro de Manuel", cant_pag = 351 WHERE id_registro = 6;
+UPDATE primer_tabla SET nombre_libro = "62 Modelo para armar", cant_pag = 284 WHERE id_registro = 7;
